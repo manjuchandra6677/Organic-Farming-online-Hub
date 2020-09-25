@@ -1,0 +1,83 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/static/styles/engreg.css">
+</head>
+<body>
+<header style="background-color:rgba(0,0,0,0.7);  height:70px; width:90%%;text-align:center; margin:-10px;">
+      <p style="font-size: 30px; color: white;text-align: center; padding-top: 15px;"> Engineer Registration  Form</P>
+   </header>
+
+ <form action="enter" method="post" name="border" > {% csrf_token %}
+<table align="center" cellpadding = "15" >
+
+<
+    <td><b>First Name:</b></td>
+<td><input type="text" name="firstname" ><br>
+</td>
+</tr>
+
+<tr>
+    <td><b>Last Name:</b></td>
+<td><input type="text" name="Name" ><br>
+</td>
+</tr>
+
+<tr>
+    <td><b>Select Gender:</b></td>
+<td> <input type="radio" name="gender" value="male">
+    Male
+    <input type="radio" name="gender" value="female">
+    Female
+    <br>
+</td>
+</tr>
+<tr>
+<td>
+    <b>Date of Birth:</b></td>
+<td><input type="date" name="date">
+<br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <b>Highest Qualification:</b></td>
+<td><select name="options">
+	<option value="select">--select--</option>
+	<option value="B.sc in Agriculture">B.sc in Agriculture</option>
+	<option value="Diplomo in Agriculture">Diplomo in Agriculture</option>
+    <option value="others">others</option>
+	</select><br></td>
+</tr>
+
+<td>
+    <b>Work Expirence:</b> </td>
+<td><input type="text" placeholder="In Years" name="enternumber" required><br>
+</td>
+</tr>
+
+<tr>
+    <td><b>Email ID:</b></td>
+<td><input type="email" placeholder="example  @email.com" name="mailid" required>
+</td>
+</tr>
+
+<tr>
+    <td><b>Phone Number:</b>
+</td>
+<td>
+	<input type="text" placeholder="Enter 10 digits number" name="phonenumber" required>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+
+
+<input type="submit" value="Submit" >
+</td>
+</tr>
+</table>
+ </form>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Details</title>
+    <link rel="stylesheet" href="/static/styles/cropdetails.css"
+</head>
+<body>
+<div class="cropdetails">
+<h2>Crop Details</h2>
+<form action="details">
+<table>
+
+
+<div class="cropdetails">
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Area</th>
+    <th>Soil</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Irrigation</th>
+  </tr>
+    {% for i in crop %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.area}}</td>
+        <td>{{i.soil}}</td>
+        <td>{{i.start}}</td>
+        <td>{{i.end}}</td>
+        <td>{{i.irrigation}}</td>
+    </tr>
+{% endfor %}
+
+</div>
+
+</table>
+</form>
+<div class="back1">
+<a href="back1" style="text-decoration:none; color:white;">Go Back</a>
+</div>
+</div>
+</body>
+</html>

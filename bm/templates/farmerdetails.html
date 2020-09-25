@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farmer Details</title>
+    <link rel="stylesheet" href="/static/styles/farmerdetails.css"
+</head>
+<body>
+<div class="farmerdetails">
+<h2>Farmer Details</h2>
+<form action="details">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Address</th>
+    <th>pincode</th>
+    <th>Phone Number</th>
+  </tr>
+    {% for i in farmer %}
+    <tr>
+        <td>{{i.Name1}}</td>
+        <td>{{i.gender}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.pincode}}</td>
+        <td>{{i.phonenumber}}</td>
+    </tr>
+{% endfor %}
+</table>
+    </form>
+</div>
+<div class="back">
+<a href="back" style="color:white; text-decoration:none;">Go Back</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+h2{
+text-align:center;
+color:green;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.farmerdetails{
+border-style: solid;
+  border-width:4px;
+  border-color:green;
+  border-radius:8px;
+  }
+.back{
+font-size:20px;
+text-align:center;
+width:130px;
+border:2px solid green;
+background-color:blue;
+margin-left:650px;
+height:25px;
+padding:5px 7px;
+position:fixed;
+bottom:0;
+border-radius:8px;
+}

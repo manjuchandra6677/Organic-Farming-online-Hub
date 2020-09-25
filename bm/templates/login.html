@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farmer Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/static/styles/login.css">
+    <script>
+        function show(){
+        var pass=document.getElementById('pword');
+        if(document.getElementById('check').checked)
+        {
+        pass.setAttribute('type','text');
+        }
+        else{
+        pass.setAttribute('type','password*');
+        }
+      }
+    </script>
+</head>
+<body>
+
+<form action="log" style="max-width:500px;margin:auto" method="post">{% csrf_token %}
+ <center> <h1><font color="green">WELCOME!.....</font></h1></center>
+  <h2><font color="green">ORGANIC FARMING ONLINE HUB!</font></h2><br>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="User Id*" name="usr">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password*" name="ps" id="pword">
+
+  </div>
+<input type="checkbox" id="check" onclick="show()"/>showpassword<br><br>
+  <button type="submit" class="btn">Login</button><br><br>
+</form>
+
+</body>
+</html>

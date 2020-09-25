@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ORGANIC FARMING ONLINE HUB</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/1680bae160.js"></script>
+  <link rel="stylesheet" href="/static/styles/farm.css">
+</head>
+<body>
+
+<div class="header" style="margin-bottom:0">
+<br>
+
+  <h1>ORGANIC FARMING ONLINE HUB</h1><p>
+  <h5><i>Agriculture is not a profession ! It's a Responsibility.</i></h5></p>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class='fas fa-home' href="hme">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class='fas fa-home'></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="crop">CROP REGS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">FERTILIZERS</a>
+      </li>
+<li class="nav-item">
+
+<a onclick="document.getElementById('id01').style.display='block'" style="margin-left:1000px;"
+   href="#">QUIRIES</a>
+</li>
+      <li class="nav-item">
+        <a class="logout" href="lgout" style="margin-left:40px;">LOGOUT</a>
+      </li>
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="question" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="box">
+  <h3>Farmer Queryes</h3>
+
+    <label>User Email</label>
+    <input type="text" name="fid" placeholder="enter user mailid" required>
+   <textarea rows="20" cols="30" placeholder="queryes" name="text"></textarea><br>
+   <input type="file" placeholder="select file" name="queryp"><br><br>
+   </div>
+    <div class="container">
+      <button type="submit" onclick="document.getElementById('id01').style.display='none'"
+              class="postbtn">Post</button>
+
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+    </ul>
+  </div>  
+</nav>
+
+<div class="container1" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>Why Farm Organically?</h2>
+      <div class="fakeimg1"></div>
+	  <p><i>The main reasons farmers state for wanting to farm organically are their concerns for the environment and about
+	  working with agricultural chemicals in conventional farming systems. There is also an issue with the amount of energy used in agriculture, since many farm chemicals require energy intensive manufacturing processes that
+	  rely heavily on fossil fuels. Organic farmers find their method of farming to be profitable and personally rewarding.</i></p>
+	  <h2>Growth of Organic Agriculture</h2>
+      <div class="fakeimg4"></div>
+	  <p><i>The world market for organic food has grown for over 15 years. Growth of retail sales in North America is predicted to
+	  be 10 per cent to 20 per cent per year during the next few years.</i></p>
+    
+ 
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-8">
+      <h2>MAKING ORGANIC FARMING FASHIONABLE</h2>
+      <h5><i>Farmers as well as urban individuals are adopting organic farming practices and reaping more benefits; the more organic and natural the produce,
+	  the safer and healthier it is for us and for the environment</i></h5>
+      <div class="fakeimg2"></div>
+      <p><i>Farming, as we know, is a traditional occupation that’s been followed since time immemorial. But the organic farming concept is
+	  gaining prominence in India not only in the farming community, but also among the city dwellers as we can see a lot of individuals venturing into this field.</i></p>
+      <br>
+      <h2>CREATING AWARENESS</h2>
+      <h5><i>According to the recent TechSci, the global organic food market is set to grow by 16 percent over 
+	  the next three years; as for the organic food market in India, it is projected to register growth of over 25 percent by 2020.
+	  Hamsa stands by the fact that organic farming is gaining popularity.</i></h5>
+      <div class="fakeimg3"></div>
+      
+      <p><i>Despite the fact that some of the urban individuals are taking up farming, more awareness needs to be created.</i></p>
+    </div>
+  </div>
+</div>
+
+<div class="fotter" style="margin-bottom:10px">
+ <h2>Contact Us:organic.hub@gmail.com</h2>
+</div>
+
+</body>
+</html>

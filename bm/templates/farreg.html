@@ -1,0 +1,110 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/static/styles/farreg.css">
+
+</head>
+<body>
+<header style="background-color:aqua;  height:60px; width:100%%;text-align:center; margin:-30px;">
+      <p style="font-size: 30px; color: black;text-align: center; padding-top: 15px;"> Farmer Registration  Form</P>
+   </header>
+
+<br>
+<br>
+<form action="farmer" method="post" >  {% csrf_token %}
+<table align="center" cellpadding = "10">
+
+<tr>
+<td><b>First Name</b></td>
+<td><input type="text" name="firstname" ><br>
+</td>
+</tr>
+
+<tr>
+<td><b>Last Name</b></td>
+<td><input type="text" name="Name" ><br>
+</td>
+</tr>
+
+<tr>
+
+<td><b>Select Gender</b></td>
+<td> <input type="radio" name="gender" value="male">
+    Male
+    <input type="radio" name="gender" value="female">
+    Female
+
+
+<br>
+</td>
+</tr>
+<tr>
+<td><b>
+Date of Birth</b></td>
+<td><input type="date" name="date">
+<br>
+</td>
+</tr>
+
+<tr>
+<td><b>
+Address Proof</b></td>
+<td><select name="options">
+<option value="select">--select--</option>
+	<option value="Aadhar">Aadhar</option>
+	<option value="Driving  Lisence">DrivingLisence</option>
+	<option value="PAN Card">PAN Card</option>
+	<option value="Other">Other</option>
+	</select><br></td>
+</tr>
+
+<tr>
+<td><b>
+ID Number</b> </td>
+<td><input type="text" placeholder="Enter Id" name="idnumber" required><br>
+
+
+</td>
+</tr>
+<tr>
+<td><b>
+Address</b> </td>
+    <td colspan="2"><textarea name="address" rows="8" cols="30"></textarea></td>
+</tr>
+<tr>
+	<td><b>PinCode</b></td>
+	<td>
+		<input type="text" placeholder="enter pincode" name="pincode" required>
+	</td>
+
+
+
+
+
+
+    <tr>
+	<td><b>Email ID</b></td>
+	<td>
+		<input type="email" placeholder="enter Email id" name="mailid" required>
+	</td>
+</tr>
+
+<tr>
+<td><b>Phone Number</b>
+</td>
+<td>
+	<input type="text" placeholder="Enter 10 digits number" name="phonenumber" required>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+
+<input type="submit" value="Submit">
+</td>
+</tr>
+
+
+</table>
+</form>
+</body>
+</html>

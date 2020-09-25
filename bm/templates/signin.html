@@ -1,0 +1,62 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/static/styles/signin.css">
+    <!--<script>
+        function validpassword(){
+      var password=document.password.pass1.value;
+      var cpassword=document.password.pass2.value;
+
+           if(password.length<5){
+           alert("please enter atleast 5 characters");
+           return false;
+           }
+                if(password==cpassword){
+                return true;}
+                else{
+				alert("password & confirm password must be same");
+                return false;
+                }
+
+
+}
+    </script>-->
+
+    <script>
+        function show(){
+        var pass=document.getElementById('pword');
+        if(document.getElementById('check').checked)
+        {
+        pass.setAttribute('type','text');
+        }
+        else{
+        pass.setAttribute('type','password');
+        }
+      }
+    </script>
+</head>
+<body background="/static/images/signin.jpg">
+<header style="background-color:rgba(0,0,0,0.7);  height:70px; width:90%%;text-align:center; margin:-10px;">
+    <p style="font-size: 30px; color: white;text-align: center; padding-top: 15px;"><i> Signin To Organic Online Farm Hub</i></P>
+   </header>
+
+<br><div class="sign">
+<form action="signin" onsubmit="return validpassword()" name="password" method="post"> {% csrf_token %}
+  <div class="container">
+    <label for="user"><b>Create UserId</b></label><br>
+    <input type="email" placeholder="Use Email" name="user" required><br>
+    <label for="pass1"><b>Create Password</b></label><br>
+    <input type="password" placeholder="Enter atleast 8 charecters" name="pass1" id="pword" required><br>
+	<label for="pass2"><b>Confrm  Password</b></label><br>
+    <input type="password" placeholder="Re-enter password" name="pass2" required><br>
+<input type="checkbox" id="check" onclick="show()"/>showpassword<br><br>
+	<button onclick="Create" class="btn">Create</button>
+	</div>
+	</form>
+</div>
+
+{% for mes in messages %}
+
+{{mes}}
+{% endfor %}
+	</body>
+	</html>

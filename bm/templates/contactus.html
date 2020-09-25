@@ -1,0 +1,32 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/static/styles/contactus.css">
+</head>
+<body>
+<header style="background-color:rgba(0,0,0,0.7);  height:70px; width:90%%;text-align:center; margin:-10px;">
+    <p style="font-size: 30px; color: white;text-align: center; padding-top: 15px;">
+        <i>Organic Farming Online Hub</i></P>
+   </header>
+<br>
+<br>
+
+<h2><b>HAVE TO KNOW SOMETHING?</b></h2>
+<img src="/static/images/mail.jpg">
+
+<form action="contact" method="post">
+    {% csrf_token %}
+<div class="firstname">
+<input type="text" name="name1" placeholder=" first name"></div>
+<div class="secondname">
+<input type="text" name="name2" placeholder=" second name"></div>
+<div class="mail">
+<input type="email" name="email" placeholder=" email id"><div>
+<div class="text">
+<textarea rows="6" cols="30" name="quiry" placeholder="your questions....." style="height:200px"></textarea></div>
+<div class=submit>
+<input type="submit" value="SEND MESSAGE"></div>
+</form>
+
+</body>
+<html>
+

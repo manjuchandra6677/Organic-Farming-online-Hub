@@ -1,0 +1,41 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+h2{
+text-align:center;
+color:black;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.cropdetails{
+border-style: solid;
+  border-width:4px;
+  border-color:green;
+  border-radius:8px;
+  width:80%
+  margin-left:80px;
+  }
+
+.back1{
+font-size:20px;
+text-align:center;
+width:150px;
+border:2px solid green;
+background-color:blue;
+margin-left:650px;
+height:30px;
+padding:5px 7px;
+border-radius:8px;
+position:fixed;
+bottom:0;
+
+}

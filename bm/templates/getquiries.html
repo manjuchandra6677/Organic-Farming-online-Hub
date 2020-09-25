@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Farmer Quiries</title>
+    <link rel="stylesheet" href="/static/styles/getquiries.css">
+</head>
+<body>
+
+<div class="modal">
+  <h2><center><i>Farmer Quires</i></center></h2><br>
+<div class="respond">
+<table>
+  <tr>
+    <th>Farmer Id</th>
+    <th>Quiry</th>
+    <th>File</th>
+    <th>status</th>
+    <th>   </th>
+  </tr>
+
+  <tr>
+    {% for i in Farmer %}
+  <td>{{i.fid}}</td>
+  <td>{{i.quiry}}</td>
+
+  <td><img src="/media/{{i.fileup}} " style="height:200px; width:200px"/></td>
+  <td>{{i.status}}</td>
+     <form action="respond" method="post">
+         {% csrf_token %}
+         <input type="hidden" value="{{i.id}}" name="ids">
+         <input type="hidden" value="{{i.fid}}" name="email">
+         <input type="hidden" value="{{i.quiry}}" name="quiry">
+  <td><button type="submit" class="button" >Respond</button></td>
+     </form>
+  </tr>
+  {% endfor %}
+
+</table>
+</div>
+</div>
+
+
+</body>
+</html>

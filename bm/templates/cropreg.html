@@ -1,0 +1,114 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/styles/cropreg.css">
+<script >
+function myprint() {
+  window.print();
+}
+</script>
+
+</head>
+<body>
+<header style="background-color:green;  height: 70px; width:100%%;text-align: center;margin:-25px;">
+      <p style="font-size: 30px; color: white;text-align: center; padding-top: 15px;">
+          Crop Registration  Form</P>
+   </header>  <br><br>
+   
+ 
+<div class="brdr"><br>
+<form action="cropreg" method="post"> {% csrf_token %}
+
+<table align="center" cellpadding = "10">
+
+<tr>
+<td>Farmer's register Id</td>
+<td><input type="text" name="idnum" ><br>
+</td>
+</tr>
+
+
+<tr>
+<td>
+Crop name</td>
+<td><input type="text" name="nam">
+<br>
+</td>
+</tr>
+
+<tr>
+<td>
+Area of  Farming</td>
+<td><input type="text" name="are"></td>
+</tr>
+
+<tr>
+<td>
+Type of Soil </td>
+<td><select name="options">
+<option value="select">Select</option>
+<option value="Loam">Loam</option>
+<option value="Clay">Clay</option>
+<option value="Sand">Sand</option>
+<option value="Silt">Silt</option>
+<option value="Peat">Peat</option>
+</select>
+
+
+</td>
+</tr>
+<tr>
+<td>
+Start Date of Crop: </td>
+<td><input type="date" name="date1"></td>
+</tr>
+
+<tr>
+<td>End Date of Crop:
+</td>
+<td>
+<input type="date" name="date2">
+</td>
+</tr>
+
+
+<tr>
+<td>Type of Irrigation</td>
+<td>
+<select name="irrigation">
+<option value="select">--Select--</option>
+<option value="Drip irrigation">Drip irrigation</option>
+<option value="Sprinkler system">Sprinkler system</option>
+<option value="Using Rainguns">Using Rainguns</option>
+<option value="others">Others</option>
+
+</td>
+</tr>
+
+<tr>
+<td>Type of farming</td>
+<td><select name="farming">
+<option value="select">--Select--</option>
+<option value="Small Scale Farming">Small scale Farming</option>
+<option value="Home Farming">Home Farming</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center"><br>
+<button onclick="Submit">Submit</button>
+</td>
+</tr>
+
+</table>
+</form>
+</div>
+<br>
+<br>
+<br>
+<div class="bck">
+
+   <a href="bck" style="text-decoration: none; color:white;">Go Back</a>
+</div>
+</body>
+</html>
